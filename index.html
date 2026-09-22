@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para Nathaly 💛</title>
+<link rel="icon" href="data:,">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   html,body { height:100%; overflow:hidden; font-family: Georgia, 'Segoe Script', cursive; }
@@ -194,7 +195,9 @@ function makeFlower(fx, fy, fi, sc, amp, sway) {
 
   head.addEventListener('click', () => zoomTo(f));
 
-  return { fx, fy, fi, sc, head, petals, amp, sway };
+  f.fx = fx; f.fy = fy; f.fi = fi; f.sc = sc; f.amp = amp; f.sway = sway;
+  f.head = head; f.petals = petals;
+  return f;
 }
 
 const flowers = [
